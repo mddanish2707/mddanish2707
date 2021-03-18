@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Fabonicc {
+	public static void main(String[] args) {
+		abc();
+	}
+	public static void abc() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Number Where you Want To Check Fabonicc series");
+		int n = sc.nextInt();
+		int a1=0,a2=1,sum;
+		for(int i=0; i<n; i++) {
+			System.out.print(a1);
+			if(n-1 > i) {
+				System.out.print(" ,");
+			}
+			sum = a1+a2;
+			a2=a1;
+			a1=sum;
+			
+		}
+		System.out.println("");
+		xyz();
+	}
+	public static void xyz() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Y/N If you Want To Check More Fabonicc series");
+		String n =sc.nextLine();
+		if(n.equals("Y") || n.equals("y")) {
+			abc();
+		}else if(n.equals("N") || n.equals("n"))
+			System.out.println("Thank you for Using this program");
+	}
+		
+}
